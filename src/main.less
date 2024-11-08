@@ -1,0 +1,73 @@
+
+// 定义基本变量  
+@base-font-size: 16px; // 基准字体大小  
+@breakpoint-small: 768px; // 小屏幕断点  
+@breakpoint-medium: 1024px; // 中屏幕断点  
+@breakpoint-large: 1200px; // 大屏幕断点   
+// 设置根元素的字体大小  
+html {  
+  font-size: @base-font-size;  
+  height: 100vh;
+  width: 100vw;
+}  
+  
+// 通用样式  
+body {
+  width: 100%;
+  height: 100%;
+  font-size: 1rem; // 16px，基于根元素的字体大小  
+  margin: 0;  
+  padding: 0;  
+  box-sizing: border-box;  
+}  
+  
+// 媒体查询  
+@media (max-width: (@breakpoint-small - 1)) {  
+  html {  
+    font-size: 14px; // 小屏幕下调整根元素的字体大小  
+  }  
+}  
+  
+@media (min-width: @breakpoint-small) and (max-width: (@breakpoint-medium - 1)) {  
+  html {  
+    font-size: 16px; // 中屏幕下保持默认字体大小  
+  }  
+}  
+  
+@media (min-width: @breakpoint-medium) and (max-width: (@breakpoint-large - 1)) {  
+  html {  
+    font-size: 18px; // 大屏幕下调整根元素的字体大小  
+  }  
+}  
+  
+@media (min-width: @breakpoint-large) {  
+  html {  
+    font-size: 20px; // 超大屏幕下调整根元素的字体大小  
+  }  
+}
+//定义样式变量
+@bgc:blue;
+
+.App {
+    text-align: center;
+    width: 100%;
+    height: 100%;
+  } 
+  .MainContainer{
+    width: 100%;
+    height: 100%;
+    .ant-flex{
+      width: 100%;
+      height: 100%;
+
+    }
+  }
+  @keyframes App-logo-spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
